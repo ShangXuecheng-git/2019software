@@ -1,2 +1,3 @@
-项目名称：OUC课程评价系统
-项目详情请参考博客：https://www.cnblogs.com/secret-field/
+椤圭洰鍚嶇О锛歄UC璇剧▼璇勪环绯荤粺
+椤圭洰绠�浠嬶細涓轰簡璁㎡UC瀛﹀瓙鐨勯�夎鏇村姞鏂逛究
+椤圭洰璇︽儏璇峰弬鑰冨崥瀹細https://www.cnblogs.com/secret-field/
