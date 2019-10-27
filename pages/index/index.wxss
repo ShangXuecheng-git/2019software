@@ -1,0 +1,45 @@
+swiper{
+   width:100%;
+   height:300rpx;
+}/*swiper样式*/
+
+swiper image{
+  width:100%;
+  height:300rpx;
+}/*swiper内图片样式*/
+
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*容器中子元素两端对齐，子元素之间的间隔相等*/
+  /*align-items: center; 位于页面中央*/   
+}
+
+.user-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-images{
+  width:100rpx; 
+  height:100rpx;
+  margin-top:30rpx;  /*距页面上边距离*/
+}
+
+.user-name{
+  font-size: 40rpx;
+  font-weight: bold; /*加粗 */
+  
+}
+
+.moto-container{
+  border:1px solid #808080;
+  height:500rpx;
+  
+  margin-top:10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 20px; /*圆角效果*/
+}

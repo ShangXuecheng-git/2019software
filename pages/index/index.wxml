@@ -1,0 +1,36 @@
+<view >
+  <swiper indicator-dots="true" autoplay="true"> 
+    <swiper-item>
+      <image src="/images/wx.png" ></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/vr.png" ></image>
+    </swiper-item>
+    <swiper-item>
+       <image src="/images/iqiyi.png" ></image>
+    </swiper-item>
+  </swiper>
+  <view  class=" container; moto-container">
+    <view class="user-container">
+      <image class="user-images"
+      src="/images/search.png" bind:tap="onTap"></image>
+      <text class="user-name">搜课</text>
+    </view>
+    <view class="user-container">
+      <image class="user-images"
+      src="/images/sport.png" bind:tap="onTap"></image>
+      <text class="user-name">体育</text>
+    </view>
+    <view class="user-container">
+      <image class="user-images"
+      src="/images/book.png" bind:tap="onTap"></image>
+      <text class="user-name">通识</text>
+    </view>
+    <view class="user-container">
+      <image class="user-images"
+      src="/images/advice.png" bind:tap="onTap"></image>
+      <text class="user-name">建议</text>
+    </view>
+   
+  </view>
+</view>
