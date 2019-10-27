@@ -1,0 +1,24 @@
+<view class="head" style="background-image:url('/images/my@bg.png')">
+  <view class="user-image">
+    <image src="/images/收藏.png" class="image" style="border-radius: 50%;"></image>
+    <text>个人昵称</text>
+  </view>
+  <view class="toll">
+    <view class="toll-body">
+      <image src="/images/评论.png" class="image"></image>
+      <text style="color:gray;">评论</text>
+    </view>
+    <view class="toll-body">
+      <image src="/images/评论_回复.png" class="image"></image>
+      <text style="color:gray;">私信</text>
+    </view>
+    <view class="toll-body">
+      <image src="/images/收藏.png" class="image"></image>
+      <text style="color:gray;">收藏</text>
+    </view>
+    <view class="toll-body">
+      <image src="/images/关于我们-1.png" class="image"></image>
+      <text style="color:gray;">关于我们</text>
+    </view>
+  </view>
+</view>
