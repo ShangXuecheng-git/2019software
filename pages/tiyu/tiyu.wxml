@@ -1,0 +1,7 @@
+<view wx:for="{{courseList}}" wx:key="{{index}}">
+    <view>名称：{{item.name}}</view>
+    <view>评分：{{item.score}}</view>
+    <view>教师：{{item.teacher}}</view>
+    <button data-courseid="{{item._id}}" bindtap="getDetail">点击查看详情</button>
+    <view><text>————————————————</text></view>
+</view>
