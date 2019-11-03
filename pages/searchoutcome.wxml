@@ -1,0 +1,51 @@
+<!--pages/searchoutcome/searchoutcome.wxml-->
+<view>{{name}}</view>
+<view>教师：{{teacher}}</view>
+<view>评分：{{score}}</view>
+<view>——————————————————</view>
+<view>撰写评论</view>
+<!--复选框：匿名、上过-->
+<van-checkbox value="{{ checked }}" bind:change="onChange">匿名评价</van-checkbox>
+<van-checkbox value="{{ checked2 }}" bind:change="onChange2">上过</van-checkbox>
+<!--评论输入框-->
+<van-cell-group>
+  <van-field
+    value="{{ content }}"
+    placeholder="写一些评价吧"
+    bind:change="onContentChange"
+  />
+</van-cell-group>
+<!--星形评分-->
+<van-rate
+  value="{{ value }}"
+  size="{{ 25 }}"
+  allow-half
+  color="#ee0a24"
+  void-color="#eee"
+  void-icon="star"
+  bind:change="onScoreChange"
+/>
+<!--上传图片-->
+<van-button type="primary" bindtap="uploadImg">上传图片</van-button>
+<view>
+  <image src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image>
+</view>
+<button open-type='getUserInfo' bindgetuserinfo="submit">提交评价</button>
+<view>————————————————</view>
+<view>评论列表</view>
+<view>————————————————</view>
+<view wx:for="{{commentList}}" wx:key="{{index}}" wx:for-item="cItem">
+    <view wx:if="{{commentList.length==0}}"><text>这里空空如也，赶快撰写你的评论吧！</text></view>
+    <view>用户头像：
+    <image src="{{cItem.userTx}}"></image>
+    </view>
+    <view>用户昵称：{{cItem.nickname}}</view>
+    <view>创建时间: {{cItem.createtime}}</view>
+    <view>内容：{{cItem.content}}</view>
+    <view>评分：{{cItem.score}}</view>
+    <image wx:for="{{cItem.fileIds}}" wx:key="{{index}}" src="{{item}}"></image>
+    <view>————————————————————</view>
+</view>
+
+
+
