@@ -1,0 +1,20 @@
+<!--pages/Search/Search.wxml-->
+<!--pages/search/search.wxml-->
+<view class="search page_row">
+  <view class="search_page">
+    <image src="/images/icons/search.png" class="image"></image>
+    <input class="df_1" placeholder="填写课程名" value="{{searchValue}}" bindinput="searchValueInput" />
+  </view>
+
+</view>
+<view class="search_no" wx:if="{{!centent_Show}}">
+  <text>很抱歉,没有找到您要搜索的资料/(ㄒoㄒ)/~~</text>
+</view>
+<view class="infoStyle" wx:if="{{centent_Show}}">
+  <view class="recentSearch">
+  
+  </view>
+  <view class="hotSearch">
+  
+  </view>
+</view>
