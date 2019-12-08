@@ -1,0 +1,33 @@
+<!--pages/Search/Search.wxml-->
+<!--pages/search/search.wxml-->
+<view class="search page_row">
+  <view class="search_page">
+    <image src="/images/icons/search.png" class="image" catchtap="search"></image>
+    <input class="df_1" placeholder="填写课程名" value="{{searchValue}}" bindconfirm="search" bindinput="searchValueInput" />
+    <image class="image" wx:if="{{searchValue != ''}}" catchtap="clear" src="/images/icons/clear.png"></image>
+  </view>
+</view>
+<view class="search_no" wx:if="{{!hasResult}}">
+  <text>Sorry!</text>
+  <text>This course was not found!</text>
+</view>
+<view class="search_no" wx:if="{{!hasInput}}">
+  <text>Sorry!</text>
+  <text>您还没有输入内容哦~</text>
+</view>
+<view class="infoStyle" wx:if="{{centent_Show}}">
+  <view class="recentSearch">最近搜索</view>
+    <view wx:for="{{historyList}}" wx:key="{{index}}" wx:for-item="cItem">
+      <view>{{cItem}}</view>
+    </view>
+    <image wx:if="{{historyList.length != 0}}" class="image" catchtap="clearHistory" src="/images/icons/delete.png"></image>
+  <view class="recentSearch">热门搜索</view>
+  <view class="recentSearch">搜索结果</view>
+  <view wx:for="{{goodList}}" wx:key="{{index}}" wx:for-item="cItem">
+  <view>名称：{{cItem.name}}</view>
+  <view>评分：{{cItem.score}}</view>
+  <view>教师：{{cItem.teacher}}</view>
+  <view>----------我是一条分割线---------</view>
+</view>
+</view>
+
