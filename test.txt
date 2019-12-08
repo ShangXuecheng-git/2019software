@@ -1,3 +1,0 @@
-项目名称：OUC课程评价系统
-项目简介：为了让OUC学子的选课更加方便
-项目详情请参考博客：https://www.cnblogs.com/secret-field/
