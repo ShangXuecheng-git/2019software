@@ -1,0 +1,78 @@
+<!--pages/searchoutcome/searchoutcome.wxml-->
+<image wx:if="{{!collectionStatus}}" class="discuss-like-image" src="../../images/icons/docollection.png" bindtap="onTapCollection"></image>
+<image wx:else src="../../images/icons/mycollection.png" class="discuss-like-image"  bindtap="onTapCollection"></image>
+
+<view class="head">
+  <view style="font-size:40rpx;font-style: italic;margin: 10rpx;">{{name}}</view>
+  <view style="margin:10rpx;">教师：{{teacher}}</view>
+  <view style="margin:10rpx;">评分：{{score}}</view>
+</view>
+
+
+<view class="disc">
+  <!--星形评分-->
+  <view class="disc_code">
+    <view>评分:</view>
+    <van-rate value="{{ value }}" size="{{ 25 }}" allow-half color="#ee0a24" void-color="#eee" void-icon="star" bind:change="onScoreChange" />
+  </view>
+
+
+
+  <view class="disc_skill">
+
+    <!--复选框：匿名、上过-->
+    <view class="skill_cho">
+      <van-checkbox value="{{ checked }}" bind:change="onChange">匿名评价</van-checkbox>
+      <van-checkbox value="{{ checked2 }}" bind:change="onChange2">上过</van-checkbox>
+    </view>
+    <!--评论输入框-->
+      <van-cell-group>
+        <van-field value="{{ content }}" placeholder="写一些评价吧" bind:change="onContentChange" />
+      </van-cell-group>
+    
+
+  </view>
+  <!--上传图片-->
+  <view class="disc_d">
+    <van-button type="primary" bindtap="uploadImg" style="margin-top:10rpx;">上传图片</van-button>
+    <van-button type="primary" open-type='getUserInfo' bindgetuserinfo="submit" style="margin-top:10rpx;">提交评价</van-button>
+  </view>
+
+  <view class="image_style">
+    <image src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image>
+  </view>
+</view>
+
+<text style="text-align:center">评论列表</text>
+<view class="discuss-page">
+  <view wx:if="{{commentList.length==0}}">
+      <text>这里空空如也，赶快撰写你的评论吧！</text>
+  </view>
+  <view wx:for="{{commentList}}" wx:key="{{index}}" wx:for-item="cItem">
+    <view class="discuss-container">
+      <view class="discuss-auther">
+        <image class="discuss-auther-image" src="{{cItem.userTx}}"></image>
+        <view class="discuss-auther-right">
+          <text class="discuss-auther-name">{{cItem.nickname}}</text>
+          <view class="discuss-auther-below">
+            <text>{{cItem.score}}   </text>
+            <text>{{cItem.createtime}}</text>
+          </view>
+        </view>
+      </view>
+      <text class="discuss-content">{{cItem.content}}</text>
+      <image wx:for="{{cItem.fileIds}}" wx:key="{{index}}" src="{{item}}"></image>
+      <view class="discuss-like">
+        <image wx:if="{{cItem.likeStatus}}" class="discuss-like-image" src="../../images/icons/like_fill.png" bindtap="onTapLike" data-index="{{index}}"></image>
+        <image wx:else class="discuss-like-image" src="../../images/icons/like.png" bindtap="onTapLike" data-index="{{index}}"></image>
+        <text class="discuss-like-text">{{cItem.likeNum}}</text>
+        <image wx:if="{{cItem.disStatus}}" class="discuss-like-image" src="../../images/icons/dislike_fill.png" bindtap="onTapDislike" data-index="{{index}}"></image>
+        <image wx:else class="discuss-like-image" src="../../images/icons/dislike.png" bindtap="onTapDislike" data-index="{{index}}"></image>
+        <text class="discuss-like-text">{{cItem.disNum}}</text>
+        <image class="discuss-like-image" src="../../images/icons/re.png" bindtap="onTapReply" data-index="{{index}}"></image>
+        <text class="discuss-like-text">{{cItem.reNum}}</text>
+        <image wx:if="{{cItem._openid == openid}}" class="discuss-like-image" src="../../images/icons/delete.png" bindtap="onTapDelete" data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

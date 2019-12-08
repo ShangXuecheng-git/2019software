@@ -1,0 +1,128 @@
+/* pages/searchoutcome/searchoutcome.wxss */
+
+/*头部样式*/
+.head{
+  border-radius: 20rpx;
+  margin: 30rpx;
+  background-color:wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 1rpx solid #333;
+  border-bottom: 1rpx solid #333; 
+}
+/*评论样式*/
+.disc{
+  border-bottom: 1rpx solid #333;
+  
+}
+/*评分框*/
+.disc_code{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.disc_d{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.disc_skill{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+
+}
+.skill_cho{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+/*评论列表样式*/
+.discuss-page{
+  margin-left:20rpx;
+  margin-right: 20rpx;
+  background-color: bisque;
+  border-radius: 10px;
+  border-top: 1rpx solid #333;
+  border-left: 1rpx solid #333;
+}
+
+.discuss-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  
+  border-bottom: 15rpx solid #ededed;/*下边线*/ 
+  padding-bottom: 10rpx;/*内边距*/
+}
+
+.discuss-auther{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+  /*margin: 10rpx 0 20rpx 10rpx; 与上面效果相同*/
+  display: flex;
+  flex-direction: row;
+  align-items:center; /*水平居中*/ 
+}
+
+.discuss-auther-image{
+  height: 60rpx;
+  width: 60rpx;
+ /* vertical-align: middle; 垂直居中*/
+}
+
+.discuss-auther-name{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.discuss-auther-right{
+  display: flex;
+  flex-direction: column;
+}
+
+.discuss-auther-below{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 15rpx;
+}
+
+.discuss-content{
+  font-size: 28rpx;
+  color: #666;
+  letter-spacing: 2rpx;/*文字间距*/
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.discuss-like{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+}
+
+.discuss-like-image{
+  height: 32rpx;
+  width: 32rpx;
+  margin-right: 16rpx;
+}
+
+.discuss-like-text{
+  margin-right: 40rpx; 
+}
